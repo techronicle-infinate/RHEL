@@ -1,0 +1,38 @@
+#------------------RPM---------------------#
+
+#rpm -i http://content.example.com/rhel8.0/x86_64/dvd/AppStream/Packages/vsftpd-3.0.3-28.el8.x86_64.rpm
+
+#rpm -qa vsftpd
+#rpm -qi vsftpd
+#rpm -qc vsftpd
+#rpm -qd vsftpd
+#rpm -ql vsftpd
+#rpm -q --scripts vsftpd 
+#rpm -q --changelog vsftpd 
+
+#rpm -evh vsftpd
+
+
+#------------------------YUM---------------------#
+
+#yum install httpd
+#yum remove httpd
+
+#yum info httpd
+
+#yum search httpd
+
+#yum list httpd
+#yum list installed httpd
+
+#yum update httpd
+
+#yum  group list
+#yum  group install   "Development Tools"
+#yum  group remove   "Development Tools"
+
+#yum  history
+#yum  history undo 6
+
+#yum list kernel
+ 

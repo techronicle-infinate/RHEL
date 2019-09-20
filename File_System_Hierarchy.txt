@@ -1,0 +1,27 @@
+bin: binary executable files (both normal and super user)  
+sbin: secured executable files (only by super user)
+
+boot: boot required files
+
+var: variable files. 
+dev: all device files
+etc: all config files
+
+home: has home directory for all normal users.
+root: home directory of super user
+
+mnt: for mounting
+media: removable devices.
+opt: for add-on software packages
+
+proc: process related files
+run: run time directory
+tmp: temp directory (lasts for 10 days)
+usr: (unix sharable Resources)
+ |--lib
+ |--lib64
+ |--bin
+ |--sbin
+
+srv: set related files (ftp,www)
+sys: plug and play configurations

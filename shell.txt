@@ -1,0 +1,18 @@
+####TEMPORARY####
+
+# /bin/sh
+
+# /bin/bash
+
+# echo $0 --->current shell
+# echo $SHELL --->default shell
+
+======================================================
+
+#### PERMANENT ####
+
+#chsh
+
+#reboot
+
+

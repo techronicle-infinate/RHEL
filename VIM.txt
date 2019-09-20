@@ -1,0 +1,86 @@
+######INSERT MODE##########
+i= insert at the same charecter
+a= ------ at next char..
+A= ------ at end of line
+o= ------ from next line
+s= ------ at same char.. by deleting it.
+S= ------ at same line by deleting the entire line.
+shift + o = insert from above line.
+
+#######NAVIGATION###########
+h=left
+j=down
+k=up
+l=right
+
+gg= 1st line of file
+shift + g = last line of thr file
+$=end of line
+0=1st char.. of line
+ctrl + arrows = shift from word to word.
+<number>gg = navigate directly with line number
+
+########COPY#############
+yy= copy the cursor line
+2yy= copy 2 lines from cursor line
+y+shift+g= copy from cursor  line  till last line of file
+y+gg= copy from cursor  line  till 1st line of file
+y+0= copy from crsor till 1st char of line
+y+$= copy from crsor till last char of line
+
+########DELETE###########
+dd= copy the cursor line
+2dd= copy 2 lines from cursor line
+d+shift+g= copy from cursor  line  till last line of file
+d+gg= copy from cursor  line  till 1st line of file
+d+0= copy from crsor till 1st char of line
+d+$= copy from crsor till last char of line
+
+########CUT###########
+cc= copy the cursor line
+2c= copy 2 lines from cursor line
+c+shift+g= copy from cursor  line  till last line of file
+c+gg= copy from cursor  line  till 1st line of file
+c+0= copy from crsor till 1st char of line
+c+$= copy from crsor till last char of line
+
+
+p= paste
+u=undo
+ctrl=r = redo
+
+############ ": MODE" ##########
+:set nu  = set line numbers
+:set nonu  = remove line numbers
+:<number> = navigate directly with line number
+:!<COMMAND> = to get command output out of vim editor
+:r!<COMMAND> = to print command output in file with vim editor
+:/<keyword> = to search keyword in vim
+>n = navigate between searched keywords in ascending
+>N = navigate between searched keywords in discending
+
+:w = save
+:q = quit
+:wq! = save and quit forcefully(!)
+:x = save and quit forcefully(!)
+>shift=zz = save and quit forcefully(!)
+:x = Encrypt and Decrypt
+:vsp <file name> = vertical Split page
+:sp <file name> = split page
+>ctrl=ww switch between files(vsp or sp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

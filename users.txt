@@ -1,0 +1,132 @@
+TYPES OF USERS:
+	1. Network User
+	2. Local User
+
+LOCAL USERS:
+			    UID                GID
+ >SUPER USER----------------0------------------0
+
+ >SYSTEM USER-------------(1-999)------------(1-999)
+                          
+ >REGULAR USER----------(1000-60000)-------(1000-60000)
+
+SYSTEM USER:
+	STATIC SYSTEM USER: 1-199
+	DYNAMIC SYSTEM USER: 200-999
+
+
+#id
+#id <UN>
+
+/etc/passwd ---> file to store user info
+
+#getent passwd
+#getent passwd <UN> ---> to get user info
+
+student:x:1000:1000:Student User:/home/student:/bin/bash
+
+student: username
+x = pointing to the password file
+1000: UID
+1000: GID
+Student User: Gcose/comment
+/home/student: home directory
+/bin/bash: SHELL
+
+
+#------------CREATE USERS-------------#
+#useradd <UN> ---> create user with default info
+#useradd -u <UID> <UN> --> create user with UID
+#useradd -g <GID> <UN> --> create with GID
+#useradd -c "COMMENT" <UN>---> create user wit comment
+#useradd -d <HOME_DIRECTORY> <UN> --> create user with different home directory
+#useradd -s <SHELL> <UN> --> create with shell
+
+#------------MODIFY USERS-------------#
+#usermod -u <UID> <USERNAME>
+#usermod -g <GID> <USERNAME>
+#usermod -c "COMMENT" <USERNAME>
+#usermod -d <HOME_DIRECTORY> -m <USERNAME>
+#usermod -s <SHELL> <USERNAME>
+#usermod -l  <NEW_USERNAME> <USERNAME>
+
+/etc/login.defs --> file which defines about default options to create user
+
+
+#passwd --> to change password
+#passwd <UN> --> to change password of othe user(can be done by super user only)
+
+
+#getent shadow <UN> ---> to get password info of user
+/etc/shadow --> Password info file
+
+#chage -l <UN> ---> to list password age
+#chage <UN>  ---> to change password age
+
+[root@workstation ~]# chage  joe
+Changing the aging information for joe
+Enter the new value, or press ENTER for the default
+
+	Minimum Password Age [0]: 2
+	Maximum Password Age [99999]: 10
+	Last Password Change (YYYY-MM-DD) [2019-09-10]:
+	Password Expiration Warning [7]: 5
+	Password Inactive [-1]: 5
+	Account Expiration Date (YYYY-MM-DD) [-1]: 2019-11-25
+
+
+#chage -d <__> <UN> --> last password change date
+#chage -m <__> <UN> --> min no. of days
+#chage -M <__> <UN> --> mix no. of days
+#chage -W <__> <UN> --> Warning period
+#chage -I <__> <UN> --> Inactive Period
+#chage -E <__> <UN> --> Account Expiration date
+
+
+#usermod -L <UN> ----> Lock user account
+#usermod -U <UN> ----> Unlock user account
+
+#passwd -l <UN> ---> Lock the user password
+#passwd -L <UN> ---> UNlock the user password
+
+#passwd -S <UN> ---> to check the status of the user
+
+
+####GROUPS######
+
+#groupadd <GN>
+#groupadd -g <GID> <GN>
+
+#groupmod  -g <GID> <GN>
+
+#gpaswd -a <UN> <GN>
+#gpaswd -M <UN>,<UN> <GN>
+
+#usermod -G <GN> <UN>
+#usermod -aG <GN> <UN>
+
+#groupmems -g <GN> -l
+
+#getent group
+#getent group <GN>
+
+#   /etc/group --> group info
+#   /etc/gshado --> group password info
+
+#newgrp <GN>  --> to create file with different group ownership.
+
+#userdel <UN>
+#userdel -r <UN>
+
+#groupdel <GN>
+
+
+
+
+
+
+
+
+
+
+

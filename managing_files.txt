@@ -1,0 +1,53 @@
+###CREATING DIRECTORIES
+
+#mkdir <dir_name>
+#mkdir <dir_name> <dir_name>
+#mkdir <dir_name>{1..5}
+#mkdir -p <dir_name>/<dir_name>
+#mkdir -p D1/{A1/{A11,A12},A2/{A21,A22}}
+D1
+├── A1
+│   ├── A11
+│   └── A12
+└── A2
+    ├── A21
+    └── A22
+
+#####CREATING FILES#####
+
+#touch <FILE_NAME>  ----- create empty file
+#touch <FILE_NAME> <FILE_NAME>
+#touch <FILE_NAME>{1..5}
+
+#cat > <FILE_NAME>  ----- create a file & overwrite 
+#cat >> <FILE_NAME> ----- create a file & append
+
+#cat <FILE_NAME> ----- view th file content
+
+
+##### COPY #####
+
+#cp <SRC> <DEST>
+
+#cp -r <SRC> <DEST>   
+
+#cp -p <SRC> <DEST>   
+
+
+##### MOVE  #####
+
+#mv <SRC> <DEST>
+
+#mv -p <SRC> <DEST>   
+
+
+
+######DELETE#####
+#rm <FILE_NAME>
+#rm -f <FILE_NAME>
+
+#rmdir <DIR_NAME>
+
+#rm -r <DIR/FILE>
+#rm -rf <DIR/FILE>
+

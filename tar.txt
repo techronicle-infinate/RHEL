@@ -1,0 +1,58 @@
+#tar -cvf <FN>.tar <FN/DN>
+
+#tar -xvf <FN>.tar <FN/DN>
+
+>c = create
+>x = extract
+>v = verbose
+>f = file
+
+####------Tar and Compress-------------#
+Gzip(z)---->    #tar -czf file.tar xyz
+		#tar -xzf file.tar.gz xyz
+
+Bzip(z)---->    #tar -cjf file.tar xyz
+		#tar -xjf file.tar.bz2 xyz
+
+Xzip(z)---->    #tar -cJf file.tar xyz
+		#tar -xJf file.tar.xz xyz
+
+
+######----------Compress for Arcive File-------####
+#gzip xyz.tar 
+#gunzip xyz.tar.gz 
+
+#bzip2 xyz.tar 
+#bunzip2 xyz.tar.bz2
+
+#xz xyz.tar
+#unxz xyz.tar.xz 
+
+
+#du -sh <FN> 
+
+
+
+
+
+####---------Copying Files Between the Systems-------#####
+
+#scp -r        <SRC>            <DEST:PATH>
+             localhost        remote host with path
+
+#scp -r    /opt/testdir1        serverb:/mnt
+
+-------------------------------------------------------------
+
+#scp -r       <SRC:PATH>           <DEST>
+         remote host with path    localhost
+
+#scp -r   serverb:/mnt/testdir1      /opt
+
+
+
+
+
+
+
+

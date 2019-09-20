@@ -1,0 +1,26 @@
+#umask
+
+### TEMP ###
+#umask 222
+
+### PERM ###
+# /etc/profile -----> for all users in system(regular users)
+
+#vim /etc/profile  
+	1st umask is for normal users
+	2nd umask is for super user
+:wq!
+
+#source /etc/profile
+
+# ~/.bash_profile  ---> spesific to one user
+	
+
+
+
+
+
+
+
+
+

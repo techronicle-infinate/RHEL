@@ -1,0 +1,33 @@
+There are 7 Tpes of files:
+
+1. Regular Files(-): Normal files
+2. Directory Files(d): Folders
+3. Link Files:
+	Soft Link Files(l): A shortcut file
+	Hard Link Files(-): A bacddkup file
+4. Charecter device Files(c): Which Reads or Write charecter by charecter.
+5. Block Device Files(b): Which Read or Writes Block by Block.
+6. Pipe Files(p):
+7. Socket Files(s):   
+
+
+
+#######-------HARD_LINK--------##########
+1. it created as a backup.
+2. inode number remains same.
+3. link count increases.
+4. once the original file is deleted the data can be retrieved by the hard link file.
+5. works only on same mount.
+6. #ln  <main-file> <link-file>
+7. Cannot create hard link for directory.
+
+
+
+########----SOFT_LINK----#########
+1. it created as a shortcut.
+2. inode number changes.
+3. link count remains same.
+4. once the original file is deleted the data cannot be retrieved by the soft link file
+5. works only on different mount.
+6. #ln -s <main-file> <link-file>
+7. Can create soft link for directories too.

@@ -1,0 +1,84 @@
+Read (r) (4)
+Write (w) (2)
+Execute (x) (1)
+
+#ls -l f1
+-rw-r--r--. 1 root root 0 Sep 11 10:04 f1
+
+"-" ==> Type of file
+"rw-r--r--" ==> Permissions
+"." ==> SELinux/ACL
+"1" ==> Link count
+"root" ==> User Owner
+"root" ==> Group Owner
+"0" ==> Size of file
+"Sep 11 10:04" ==> Time Stamp
+"f1" ==> file name
+
+#ls -ld D1
+drwxr-xr-x. 1 root root 6 Sep 11 10:04 D1
+
+"d" ==> Type of file
+"rwxr-xr-x" ==> Permissions
+"." ==> SELinux/ACL
+"2" ==> Link count
+"root" ==> User Owner
+"root" ==> Group Owner
+"6" ==> Size of file
+"Sep 11 10:15" ==> Time Stamp
+"D1" ==> file name
+
+Permissions:
+	rwxr-xr-x
+		rwx ==> User Owner
+		r-x ==> Group Owner
+		r-x ==> Others 
+
+#####---CHANGING PERMISSIONS---####
+
+Symbollic Method
+	+ ==> Add
+	- ==> Remove
+	= ==> Set Exactly
+
+#chmod u+rwx,g+rwx,o+rwx <file/directory>
+
+#chmod u-rwx,g-rwx,o-rwx <file/directory>
+
+#chmod u=rwx,g=rwx,o=rwx <file/directory>
+
+Numerical Method:
+Read (r) (4)
+Write (w) (2)
+Execute (x) (1)
+
+	rw- ==> 6
+	rwx ==> 7
+	r-x ==> 5
+
+#chmod 777 <file/directory>
+
+####----CHANGING OWNERSHIP---####
+
+#chown <USER NAME> <file/directory>
+#chgrp <GROUP NAME> <file/directory>
+
+#chown <USER NAME>:<GROUP NAME> <file/directory>
+#chown <USER NAME> <file/directory>
+#chown :<GROUP NAME> <file/directory>
+
+##########-------Special Permissions---------###########
+	 			        rwx rwx rwx
+SUID(u+s)(4)------->#chmod u+s <FN> ----rws rwx rwx
+	            #chmod u-s <FN> ----rwx rwx rwx
+
+        	      		        rwx rwx rwx
+SGID(g+s)(2)------->#chmod g+s <FN> ----rwx rws rwx
+	            #chmod g-s <FN> ----rwx rwx rwx
+
+			      	        rwx rwx rwx
+StickBit(o+t)(1)--->#chmod o+t <FN> ----rwx rwx rwt
+	            #chmod o-t <FN> ----rwx rwx rwx
+
+
+[NOTE: x is mandatory with the SUID]
